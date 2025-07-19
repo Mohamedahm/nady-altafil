@@ -6,6 +6,7 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 import psycopg2
 import os
+import threading
 load_dotenv()
 
 EMAIL = os.getenv("EMAIL")
@@ -13,6 +14,7 @@ APP_PASSWORD = os.getenv("APP_PASSWORD")
 DATABASE_URL = os.getenv("DATABASE_URL")
 app = Flask(__name__)
 
+# إعداد قاعدة البيانات
 
 
 # دالة إرسال الإيميل
@@ -74,6 +76,7 @@ def subscribe():
             return "حدث خطأ أثناء الاشتراك، الرجاء المحاولة لاحقًا."
 
     return render_template("subscribe.html")
+
 
 @app.route("/thankyou")
 def thankyou():
