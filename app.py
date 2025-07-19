@@ -14,23 +14,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 app = Flask(__name__)
 
 # إعداد قاعدة البيانات
-def init_db():
-    conn = psycopg2.connect(DATABASE_URL)
-    c = conn.cursor()
-    c.execute("""
-        CREATE TABLE IF NOT EXISTS subscribers (
-            id SERIAL PRIMARY KEY,
-            name TEXT,
-            email TEXT,
-            start_date DATE,
-            is_paid BOOLEAN DEFAULT FALSE,
-            sent_payment_email BOOLEAN DEFAULT FALSE
-        );
-    """)
-    conn.commit()
-    conn.close()
 
-init_db()
 
 # دالة إرسال الإيميل
 def send_welcome_email(to_email, name):
