@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة الإدارة</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+    <h2>📋 قائمة المشتركين</h2>
+    <table border="1" style="margin: auto; direction: rtl;">
+        <thead>
+            <tr>
+                <th>الرقم</th>
+                <th>الاسم</th>
+                <th>البريد</th>
+                <th>تاريخ التسجيل</th>
+                <th>مدفوع؟</th>
+                <th>تم إرسال رابط الدفع؟</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+                <td>{{ '✅' if row[4] else '❌' }}</td>
+                <td>{{ '📤' if row[5] else '⌛' }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
