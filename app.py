@@ -65,7 +65,7 @@ def index():
     return render_template("index.html")
 
 
-DATABASE_URL = os.getenv("DATABASE_URL")
+
 
 @app.route("/subscribe", methods=["GET", "POST"])
 def subscribe():
