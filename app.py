@@ -7,10 +7,8 @@ from dotenv import load_dotenv
 import psycopg2
 import os
 import threading
-<<<<<<< HEAD
-=======
 
->>>>>>> 33ded97 (🎨 Updated thank you page with email instructions + CSS enhancements)
+
 load_dotenv()
 
 EMAIL = os.getenv("EMAIL")
