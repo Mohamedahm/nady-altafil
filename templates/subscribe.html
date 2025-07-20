@@ -1,16 +1,28 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>نموذج الاشتراك</title>
+    <title>نموذج الاشتراك - نادي الطفل الإلكتروني</title>
     <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-  <h2>نموذج الاشتراك</h2>
-  <form method="POST">
-    <input type="text" name="name" placeholder="الاسم" required><br>
-    <input type="email" name="email" placeholder="البريد الإلكتروني" required><br>
-    <button type="submit">ابدأ التجربة المجانية</button>
-  </form>
+  <div class="container">
+    <h2>✨ نموذج الاشتراك</h2>
+    <p>يرجى إدخال البيانات التالية لبدء التجربة المجانية لمدة <strong>3 أيام</strong>:</p>
+
+    <form method="POST" class="subscription-form">
+      <input type="text" name="name" placeholder="👤 الاسم الكامل" required><br>
+      <input type="email" name="email" placeholder="📧 البريد الإلكتروني" required><br>
+      <button type="submit">🚀 ابدأ التجربة المجانية الآن</button>
+    </form>
+
+    <div class="instructions">
+      <p>📌 <strong>تنبيه مهم:</strong></p>
+      <ul>
+         يرجى التأكد من كتابة البريد الإلكتروني بشكل صحيح لتصلك المواد التعليمية.
+        في حال لم تجد الرسالة في البريد الوارد، يرجى التحقق من مجلد <strong> (Junk) أو البريد غير المرغوب فيه (Spam)</strong>.
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
