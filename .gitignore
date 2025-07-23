@@ -1,5 +1,1 @@
-.env
-*.db
-__pycache__
-.idea
-view_db.py
+init_db_once.py
