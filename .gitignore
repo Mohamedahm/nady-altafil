@@ -1,1 +1,6 @@
 init_db_once.py
+*.pyc
+*.env
+*.log
+*_once.py
+view_*.py
